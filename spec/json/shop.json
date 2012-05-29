@@ -1,0 +1,25 @@
+{
+  "shop": {
+    "address": "",
+    "city": "",
+    "created_at": "2011-11-26T20:34:10+08:00",
+    "currency": "CNY",
+    "district": "",
+    "email": "admin@shopqi.com",
+    "domain": "shop.ruby-china.com",
+    "shopqi_domain": "ruby-china-shop.shopqi.com",
+    "id": 2,
+    "money_format": "&#165;{{amount}}",
+    "money_in_emails_format": "¥{{amount}}",
+    "money_with_currency_format": "&#165;{{amount}} 元",
+    "money_with_currency_in_emails_format": "¥{{amount}} 元",
+    "name": "Ruby China Shop",
+    "order_number_format": "#{{number}}",
+    "phone": "",
+    "plan": "unlimited",
+    "province": "",
+    "updated_at": "2012-05-24T21:34:35+08:00",
+    "zip_code": ""
+  }
+}
+
