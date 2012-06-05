@@ -10,16 +10,15 @@ module FaradayMiddleware
   #
   #   # configure default token:
   #   OAuth2.new(app, 'abc123')
-  class OAuth2 < Faraday::Middleware
+  class OAuth2 < Faraday::Middleware # 不将 access_token 放在 url query
 
     AUTH_HEADER = 'Authorization'.freeze
 
     extend Forwardable
-    def_delegators :'Faraday::Utils', :parse_query, :build_query
 
     def call(env)
       if !@token.empty?
-        env[:request_headers][AUTH_HEADER] ||= %(Token token="#{@token}")
+        env[:request_headers][AUTH_HEADER] ||= "Bearer #{@token}"
       end
 
       @app.call env

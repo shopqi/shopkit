@@ -20,10 +20,10 @@ module Shopkit
       new.send(method, *args, &block)
     end
 
-
-    def setup(url, access_token)
-      self.url = url
-      self.access_token = access_token
+    def setup(options)
+      self.url = options[:url]
+      self.access_token = options[:access_token]
+      options
     end
 
   end

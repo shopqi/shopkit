@@ -6,7 +6,7 @@ module Shopkit
     private
 
     def connection
-      @conn ||= Faraday.new(:url => "https://#{url}") do |builder|
+      @conn ||= Faraday.new(:url => "http://#{url}") do |builder|
         builder.request :oauth2, access_token
         #builder.request :json
 

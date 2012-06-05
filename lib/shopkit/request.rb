@@ -21,7 +21,7 @@ module Shopkit
     private
 
     def request(method, path, options, version)
-      path = "/admin#{path}" unless path.start_with?('/admin')
+      path = "/api#{path}" unless path.start_with?('/api')
       path = "#{path}.json" unless path.end_with?('.json')
       response = connection.send(method) do |request|
         case method
