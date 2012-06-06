@@ -1,4 +1,5 @@
 require 'faraday_middleware'
+require 'faraday_middleware/request/oauth2'
 
 module Shopkit
 

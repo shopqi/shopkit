@@ -29,3 +29,5 @@ module Shopkit
   end
 
 end
+
+Faraday.register_middleware :request, :oauth2   => lambda { FaradayMiddleware::OAuth2 }
