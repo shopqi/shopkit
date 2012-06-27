@@ -12,6 +12,7 @@ end
 require 'rake'
 
 require 'jeweler'
+require './lib/shopkit/version.rb'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "shopkit"
@@ -21,6 +22,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = gem.summary
   gem.email = "mahb45@gmail.com"
   gem.authors = ["saberma"]
+  gem.version = Shopkit::VERSION
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
