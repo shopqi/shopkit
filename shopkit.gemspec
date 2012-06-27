@@ -34,6 +34,7 @@ Gem::Specification.new do |s|
     "lib/shopkit/connection.rb",
     "lib/shopkit/request.rb",
     "lib/shopkit/version.rb",
+    "shopkit.gemspec",
     "spec/json/orders.json",
     "spec/json/products.json",
     "spec/json/shop.json",
