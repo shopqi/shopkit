@@ -3,7 +3,7 @@ module Shopkit
     module Orders
 
       def orders(options={})
-        get('/orders')['orders']
+        get('/orders', options)['orders']
       end
 
     end

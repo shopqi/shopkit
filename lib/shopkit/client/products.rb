@@ -3,7 +3,7 @@ module Shopkit
     module Products
 
       def products(options={})
-        get('/products')['products']
+        get('/products', options)['products']
       end
 
     end
