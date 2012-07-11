@@ -12,5 +12,5 @@ group :development do
   gem "bundler"
   gem "jeweler"
   gem "rspec"
-  gem "fakeweb"
+  gem "webmock", "~> 1.8.7"
 end

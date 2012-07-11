@@ -1,7 +1,6 @@
-require 'fakeweb'
 require 'shopkit'
+require 'webmock/rspec'
 
-FakeWeb.allow_net_connect = false
 RSpec.configure do |config|
 
   config.before(:each) do
@@ -16,11 +15,13 @@ RSpec.configure do |config|
   end
 
   def fake_web(endpoint, options={})
-    body = options.has_key?(:body) ? options.delete(:body) : load_json(endpoint)
+    file = options[:json_file] || endpoint
+    body = options.has_key?(:body) ? options.delete(:body) : load_json(file)
     method = options.delete(:method) || :get
 
-    url = "https://#{Shopkit.url}/api/#{endpoint}.json"
-    FakeWeb.register_uri(method, url, {:body => body, :content_type => "text/json"}.merge(options))
+    #url = "https://#{Shopkit.url}/api/#{endpoint}.json"
+    url = "http://#{Shopkit.url}/api/#{endpoint}.json"
+    stub_request(method, url).to_return(body: body, headers: { content_type: 'text/json' })
   end
 
 end

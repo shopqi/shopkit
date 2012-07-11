@@ -1,5 +1,3 @@
-require 'multi_json'
-
 module Shopkit
   module Request
     def delete(path, options={}, version=api_version)
