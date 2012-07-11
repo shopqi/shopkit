@@ -1,0 +1,8 @@
+{
+  "webhook":
+    {
+      "id": 1,
+      "event": "order/fulfilled",
+      "callback_url": "http://lvh.me/webhook"
+    }
+}
