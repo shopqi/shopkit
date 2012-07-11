@@ -1,0 +1,27 @@
+{
+  "order": {
+    "cancel_reason": null,
+    "cancelled_at": null,
+    "closed_at": "2012-05-15T21:36:38+08:00",
+    "created_at": "2012-04-16T23:07:33+08:00",
+    "customer_id": 2,
+    "email": "mahb45@gmail.com",
+    "financial_status": "pending",
+    "fulfillment_status": "fulfilled",
+    "id": 99,
+    "name": "#1095",
+    "note": "",
+    "number": 95,
+    "order_number": 1095,
+    "payment_id": 8,
+    "shipping_rate": "普通快递-0",
+    "shop_id": 2,
+    "status": "closed",
+    "subtotal_price": 45.0,
+    "token": "96b1d0806a03012f21f6480aa969d9a6",
+    "total_line_items_price": 45.0,
+    "total_price": 45.0,
+    "trade_no": null,
+    "updated_at": "2012-05-15T21:36:38+08:00"
+  }
+}

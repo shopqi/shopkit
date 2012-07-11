@@ -6,6 +6,10 @@ module Shopkit
         get('/orders', options)['orders']
       end
 
+      def order(id, options={})
+        get("/orders/#{id}", options)['order']
+      end
+
     end
 
     include Orders

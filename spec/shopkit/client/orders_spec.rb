@@ -2,12 +2,15 @@ require 'spec_helper'
 
 describe Shopkit::Client::Orders do
 
-  before do
+  it 'should get orders' do
     fake_web "orders"
+    Shopkit.orders.size.should_not eql 0
   end
 
-  it 'should get orders' do
-    Shopkit.orders.size.should_not eql 0
+  it 'should get order' do
+    id = 99
+    fake_web "orders/#{id}", json_file: :order
+    Shopkit.order(id)['id'].should eql id
   end
   
 end
