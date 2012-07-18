@@ -10,7 +10,7 @@ module Shopkit
       #@conn ||= Faraday.new(:url => "https://#{url}") do |builder|
       @conn ||= Faraday.new(:url => "http://#{url}") do |builder|
         builder.request :oauth2, access_token
-        #builder.request :json
+        builder.request :json # fixed: NoMethodError: undefined method `bytesize' for {...}:Hash
 
         builder.response :logger
         builder.response :json, :content_type => /\bjson$/

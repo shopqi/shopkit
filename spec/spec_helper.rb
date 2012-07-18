@@ -1,3 +1,4 @@
+require 'json'
 require 'shopkit'
 require 'webmock/rspec'
 
@@ -16,12 +17,13 @@ RSpec.configure do |config|
 
   def fake_web(endpoint, options={})
     file = options[:json_file] || endpoint
+    request_body = options.delete(:request_body)
     body = options.has_key?(:body) ? options.delete(:body) : load_json(file)
     method = options.delete(:method) || :get
 
     #url = "https://#{Shopkit.url}/api/#{endpoint}.json"
     url = "http://#{Shopkit.url}/api/#{endpoint}.json"
-    stub_request(method, url).to_return(body: body, headers: { content_type: 'text/json' })
+    stub_request(method, url).with(body: request_body).to_return(body: body, headers: { content_type: 'text/json' })
   end
 
 end
