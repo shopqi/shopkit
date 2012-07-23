@@ -12,7 +12,7 @@ module Shopkit
         builder.request :oauth2, access_token
         builder.request :json # fixed: NoMethodError: undefined method `bytesize' for {...}:Hash
 
-        builder.response :logger
+        #builder.response :logger
         builder.response :json, :content_type => /\bjson$/
 
         builder.adapter :net_http
