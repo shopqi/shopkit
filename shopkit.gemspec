@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "shopkit"
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["saberma"]
-  s.date = "2012-07-18"
+  s.date = "2012-08-01"
   s.description = "a gem for the ShopQi API"
   s.email = "mahb45@gmail.com"
   s.extra_rdoc_files = [
@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
     "lib/shopkit/client/orders.rb",
     "lib/shopkit/client/products.rb",
     "lib/shopkit/client/shop.rb",
+    "lib/shopkit/client/variants.rb",
     "lib/shopkit/client/webhooks.rb",
     "lib/shopkit/configuration.rb",
     "lib/shopkit/connection.rb",
@@ -40,8 +41,10 @@ Gem::Specification.new do |s|
     "spec/json/orders.json",
     "spec/json/products.json",
     "spec/json/shop.json",
+    "spec/json/variant.json",
     "spec/json/webhook.json",
     "spec/shopkit/client/orders_spec.rb",
+    "spec/shopkit/client/product_variants_spec.rb",
     "spec/shopkit/client/products_spec.rb",
     "spec/shopkit/client/shop_spec.rb",
     "spec/shopkit/client/webhooks_spec.rb",

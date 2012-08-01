@@ -1,3 +1,3 @@
 module Shopkit
-  VERSION = "0.1.2" unless defined?(Shopkit::VERSION)
+  VERSION = "0.1.3" unless defined?(Shopkit::VERSION)
 end
