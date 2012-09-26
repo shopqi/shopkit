@@ -8,6 +8,8 @@ module Shopkit
       :api_version,
       :url,
       :access_token,
+      :login,
+      :password,
       :user_agent,
       :auto_traversal,
       :per_page].freeze
@@ -34,7 +36,9 @@ module Shopkit
     def reset
       self.adapter        = DEFAULT_ADAPTER
       self.api_version    = DEFAULT_API_VERSION
-      self.access_token    = nil
+      self.access_token   = nil
+      self.login          = nil
+      self.password       = nil
       self.user_agent     = DEFAULT_USER_AGENT
       self.auto_traversal = DEFAULT_AUTO_TRAVERSAL
     end

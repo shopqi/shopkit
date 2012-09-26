@@ -10,6 +10,8 @@ module Shopkit
     def new(options={})
       options['url'] = self.url
       options['access_token'] = self.access_token
+      options['login'] = self.login
+      options['password'] = self.password
       Shopkit::Client.new(options)
     end
 
@@ -22,7 +24,10 @@ module Shopkit
 
     def setup(options)
       self.url = options[:url]
+      self.url = "http://#{self.url}" unless self.url.start_with?('http://', 'https://')
       self.access_token = options[:access_token]
+      self.login = options[:login] # or basic auth
+      self.password = options[:password]
       options
     end
 
