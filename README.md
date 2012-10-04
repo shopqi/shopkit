@@ -39,3 +39,17 @@ $ gem install shopkit
 
 [商品属性](https://github.com/saberma/shopqi/blob/master/app/views/api/v1/products/show.rabl)
 [商品款式](https://github.com/saberma/shopqi/blob/master/app/views/api/v1/product_variants/show.rabl)
+
+## 开发
+
+### 发布
+
+修改 `lib/shopkit/version.rb`
+
+    rake release -t -v
+
+如果出现以下问题
+
+    ERROR:  Using beta/unreleased version of rubygems. Not pushing
+
+请尝试使用 VPN 连接网络，推荐 vpncup(免费)
