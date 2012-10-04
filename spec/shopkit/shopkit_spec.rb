@@ -7,10 +7,14 @@ describe Shopkit do
     fake_web "orders", query: {per_page: 1, page: 2}, json_file: "orders_page_2"
     fake_web "orders", query: {per_page: 1, page: 3}, json_file: "orders_page_3"
     fake_web "orders", query: {per_page: 1, page: 4}, json_file: "orders_empty"
+    Shopkit.auto_traversal = true
+  end
+
+  after do
+    Shopkit.auto_traversal = false
   end
 
   it 'should be auto_traversal' do
-    Shopkit.auto_traversal = true
     Shopkit.orders(per_page: 1, page: 1).size.should eql 3
   end
   
