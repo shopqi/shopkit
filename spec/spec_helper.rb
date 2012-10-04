@@ -23,7 +23,7 @@ RSpec.configure do |config|
     method = options.delete(:method) || :get
 
     url = "#{Shopkit.url}/api/#{endpoint}.json"
-    stub_request(method, url).with(body: request_body).to_return(body: body, headers: { content_type: 'text/json' })
+    stub_request(method, url).with(body: request_body, query: options[:query]).to_return(body: body, headers: { content_type: 'text/json' })
   end
 
 end

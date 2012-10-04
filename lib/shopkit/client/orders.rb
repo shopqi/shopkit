@@ -3,7 +3,9 @@ module Shopkit
     module Orders
 
       def orders(options={})
-        get('/orders', options)['orders']
+        traversal(options) do
+          get('/orders', options)['orders']
+        end
       end
 
       def order(id, options={})

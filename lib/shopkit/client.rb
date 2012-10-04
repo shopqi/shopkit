@@ -1,5 +1,6 @@
 require 'shopkit/connection'
 require 'shopkit/request'
+require 'shopkit/traversal'
 
 #Load all files in client/ directory
 Dir.glob("#{File.expand_path(File.dirname(__FILE__))}/client/*.rb").sort.each do |f|
@@ -19,5 +20,6 @@ module Shopkit
 
     include Shopkit::Connection
     include Shopkit::Request
+    include Shopkit::Traversal
   end
 end
