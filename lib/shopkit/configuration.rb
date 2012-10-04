@@ -18,6 +18,7 @@ module Shopkit
     DEFAULT_API_VERSION    = 1
     DEFAULT_USER_AGENT     = "Shopkit Ruby Gem #{Shopkit::VERSION}".freeze
     DEFAULT_AUTO_TRAVERSAL = false
+    DEFAULT_PER_PAGE       = 30
 
     attr_accessor(*VALID_OPTIONS_KEYS)
 
@@ -41,6 +42,7 @@ module Shopkit
       self.password       = nil
       self.user_agent     = DEFAULT_USER_AGENT
       self.auto_traversal = DEFAULT_AUTO_TRAVERSAL
+      self.per_page       = DEFAULT_PER_PAGE
     end
   end
 end

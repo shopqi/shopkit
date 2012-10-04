@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Shopkit::Client::Orders do
 
   it 'should get orders' do
-    fake_web "orders"
+    fake_web "orders", query: {per_page: 30, page: 1}
     Shopkit.orders.size.should_not eql 0
   end
 

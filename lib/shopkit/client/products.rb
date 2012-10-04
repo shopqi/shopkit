@@ -3,7 +3,9 @@ module Shopkit
     module Products
 
       def products(options={})
-        get('/products', options)['products']
+        traversal(options) do
+          get('/products', options)['products']
+        end
       end
 
       def product(id, options={})

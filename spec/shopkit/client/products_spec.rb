@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Shopkit::Client::Products do
 
   before do
-    fake_web "products"
+    fake_web "products", query: {per_page: 30, page: 1}
   end
 
   it 'should get products' do

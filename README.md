@@ -52,4 +52,4 @@ $ gem install shopkit
 
     ERROR:  Using beta/unreleased version of rubygems. Not pushing
 
-请尝试使用 VPN 连接网络，推荐 vpncup(免费)
+请尝试使用 VPN 连接网络，推荐 [vpncup](http://vcup.in/Ecz)
