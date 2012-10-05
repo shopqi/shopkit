@@ -8,7 +8,7 @@ $ gem install shopkit
 
 ## 使用
 
-* 通过 api clients 访问
+*1. 通过 api clients 访问*
 
     require 'shopkit'
     Shopkit.setup url: 'https://your-shop-name.shopqi.com', login: 'api key', password: 'password'
@@ -16,7 +16,7 @@ $ gem install shopkit
 
 `api key`, `password` 在商店后台管理 [应用] - [私有应用]，点击"生成新的应用"即可看到
 
-* 通过 OAuth2 访问
+*2. 通过 OAuth2 访问*
 
     require 'shopkit'
     Shopkit.setup url: 'https://rubyconfchina-shop.shopqi.com', access_token: 'access token'
