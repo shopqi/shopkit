@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "shopkit"
-  s.version = "0.1.5"
+  s.version = "0.1.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["saberma"]
-  s.date = "2012-10-04"
+  s.date = "2012-10-14"
   s.description = "a gem for the ShopQi API"
   s.email = "mahb45@gmail.com"
   s.extra_rdoc_files = [
